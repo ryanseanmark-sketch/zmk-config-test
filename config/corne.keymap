@@ -66,6 +66,12 @@
             key-positions = <19 20>;         // E + R
             bindings = <&kp TAB>;
         };
+
+        combo_gui {
+            timeout-ms = <50>;
+            key-positions = <18 19>;         // E + R
+            bindings = <&kp LGUI>;
+        };
     };
 
 
