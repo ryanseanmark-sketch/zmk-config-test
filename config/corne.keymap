@@ -56,8 +56,8 @@
                         >;
                 };
 
-                raise_layer {
-                        display-name = "number Layer";
+                number_layer {
+                        display-name = "Number Layer";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
