@@ -56,6 +56,12 @@
     combos {
         compatible = "zmk,combos";
 
+        bt_clear {
+            timeout-ms = <50>;
+            key-positions = <20 21>;         // E + R
+            bindings = <&bt BT_CLR>;
+        };
+
         combo_tab {
             timeout-ms = <50>;
             key-positions = <19 20>;         // E + R
