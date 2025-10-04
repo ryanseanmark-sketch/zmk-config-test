@@ -9,6 +9,16 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+        as: auto_shift {
+            compatible = "zmk,behavior-auto-shift";
+            label = "AS";
+            #binding-cells = <1>;
+        };
+    };
+};
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
