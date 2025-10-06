@@ -10,6 +10,7 @@
 
 #define AS(keycode) &as LS(keycode) keycode
 
+ behaviors {
 
 / {
       behaviors {
@@ -20,6 +21,21 @@
                 quick_tap_ms = <0>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
+            };
+
+
+            hello_macro: macro_hello {
+                compatible = "zmk,behavior-macro";
+                label = "HELLO_MACRO";
+                #binding-cells = <0>;
+                bindings = <
+                    &macro_tap
+                        &kp H
+                        &kp E
+                        &kp L
+                        &kp L
+                        &kp O
+                >;
             };
         };
 
@@ -58,10 +74,20 @@
                 number_layer {
                         display-name = "Number Layer";
                         bindings = <
-   &trans &trans &trans &trans &trans &trans         &trans  &kp N7 &kp N8 &kp N9 &kp RPAR &trans
-   &trans &trans &trans &trans &trans &trans         &kp SQT &kp N4 &kp N5 &kp N6 &kp DOT  &trans
-   &trans &trans &trans &trans &trans &trans         &kp N0  &kp N1 &kp N2 &kp N3 &kp PIPE &trans
+   &trans &trans &trans &trans &trans &trans         &hello_macro  &kp N7 &kp N8 &kp N9 &kp trans &trans
+   &trans &trans &trans &trans &trans &trans         &kp SQT &kp N4 &kp N5 &kp N6 &kp DOT   &trans
+   &trans &trans &trans &trans &trans &trans         &kp N0  &kp N1 &kp N2 &kp N3 &kp trans &trans
                         &trans &trans &trans       &kp COLON   &kp LBKT    &kp RBKT
+                        >;
+                };
+
+                function_layer {
+                        display-name = "Function Layer";
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans         &trans  &kp F7 &kp F8 &kp F9 &kp F10 &trans
+   &trans &trans &trans &trans &trans &trans         &kp SQT &kp F4 &kp F5 &kp F6 &kp F11 &trans
+   &trans &trans &trans &trans &trans &trans         &kp N0  &kp F1 &kp F2 &kp F3 &kp F12 &trans
+                        &trans &trans &trans       &kp COLON   &kp LPAR    &kp RPAR
                         >;
                 };
         };
