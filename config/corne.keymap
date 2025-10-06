@@ -10,8 +10,6 @@
 
 #define AS(keycode) &as LS(keycode) keycode
 
- behaviors {
-
 / {
       behaviors {
             as: auto_shift {
