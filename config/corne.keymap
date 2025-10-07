@@ -9,6 +9,19 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define AS(keycode) &as LS(keycode) keycode
+//            hello_macro: macro_hello {
+//                compatible = "zmk,behavior-macro";
+//                label = "HELLO_MACRO";
+//                #binding-cells = <0>;
+//                bindings = <
+//                    &macro_tap
+//                        &kp H
+//                        &kp E
+//                        &kp L
+//                        &kp L
+//                        &kp O
+//                >;
+//            };
 
 / {
       behaviors {
@@ -22,19 +35,6 @@
             };
 
 
-            hello_macro: macro_hello {
-                compatible = "zmk,behavior-macro";
-                label = "HELLO_MACRO";
-                #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp H
-                        &kp E
-                        &kp L
-                        &kp L
-                        &kp O
-                >;
-            };
         };
 
         keymap {
