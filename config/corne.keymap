@@ -60,9 +60,8 @@
                         &kp I
                         &kp L
                         &kp SPACE
-                        &kp RET
                         &kp MINUS
-                        &kp F
+                        &kp LS(F)
                         &kp SPACE
                         &kp SLASH
                         &kp V
