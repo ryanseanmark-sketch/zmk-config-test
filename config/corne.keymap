@@ -23,7 +23,6 @@
 
             hello_macro: macro_hello {
                 compatible = "zmk,behavior-macro";
-                label = "HELLO_MACRO";
                 #binding-cells = <0>;
                 bindings = <
                     &macro_tap
@@ -34,6 +33,62 @@
                         &kp O
                 >;
             };
+
+//        SEND_STRING("root\n");
+//        SEND_STRING("tail -F /var/log/logfile1.txt ");
+//        SEND_STRING("HanCommsManagerCli get-status\n");
+            root_macro: macro_root {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <
+                    &macro_tap
+                        &kp R
+                        &kp O
+                        &kp O
+                        &kp T
+                        &kp RET
+                >;
+            };
+
+            log_macro: macro_log {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <
+                    &macro_tap
+                        &kp T
+                        &kp A
+                        &kp I
+                        &kp L
+                        &kp SPACE
+                        &kp RET
+                        &kp MINUS
+                        &kp F
+                        &kp SPACE
+                        &kp SLASH
+                        &kp V
+                        &kp A
+                        &kp R
+                        &kp SLASH
+                        &kp L
+                        &kp O
+                        &kp G
+                        &kp SLASH
+                        &kp L
+                        &kp O
+                        &kp G
+                        &kp F
+                        &kp I
+                        &kp L
+                        &kp E
+                        &kp N1
+                        &kp DOT
+                        &kp T
+                        &kp X
+                        &kp T
+                        &kp SPACE
+                >;
+            };
+
 
         };
 
@@ -46,7 +101,7 @@
    &trans AS(Q) AS(W) AS(E) AS(R) AS(T)             AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    &trans
    &trans AS(A) &mt LSHIFT S AS(D) &lt 3 F AS(G)    &kp H &kp J  &kp K     &kp L   &kp SEMI &trans
    &trans AS(Z) AS(X) &kp C AS(V) AS(B)             AS(N) AS(M)  &kp COMMA &kp DOT &kp FSLH &trans
-                  &kp BSPC &mt LALT N2 &kp ESC         &kp RET &mt RCTRL N3 &kp SPACE
+                  &lt 4 BSPC &mt LALT N2 &kp ESC         &kp RET &mt RCTRL N3 &kp SPACE
                         >;
                 };
                 lower_layer {
@@ -72,7 +127,7 @@
                 number_layer {
                         display-name = "Number Layer";
                         bindings = <
-   &trans &trans &trans &trans &trans &trans         &hello_macro  &kp N7 &kp N8 &kp N9 &trans &trans
+   &trans &trans &trans &trans &trans &trans         &log_macro  &kp N7 &kp N8 &kp N9 &trans &trans
    &trans &trans &trans &trans &trans &trans         &kp SQT &kp N4 &kp N5 &kp N6 &kp DOT   &trans
    &trans &trans &trans &trans &trans &trans         &kp N0  &kp N1 &kp N2 &kp N3 &trans &trans
                         &trans &trans &trans       &kp COLON   &kp LBKT    &kp RBKT
