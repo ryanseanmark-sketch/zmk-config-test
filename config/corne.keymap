@@ -56,27 +56,6 @@
                 >;
             };
 
-            appls_macro: macro_appls {
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp LS(A)
-                        &kp P
-                        &kp P
-                        &kp E
-                        &kp L
-                        &kp S
-                        &kp LS(O)
-                        &kp R
-                        &kp A
-                        &kp N
-                        &kp J
-                        &kp E
-                        &kp S
-                        &kp RET
-                >;
-            };
             han_macro: macro_han {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
@@ -229,20 +208,20 @@
                 number_layer {
                         display-name = "Number Layer 3";
                         bindings = <
-   &trans &trans &trans &trans &trans &trans         &trans  &kp N7 &kp N8 &kp N9 &trans &trans
-   &trans &trans &trans &trans &trans &trans         &kp SQT &kp N4 &kp N5 &kp N6 &kp DOT   &trans
-   &trans &trans &trans &trans &trans &trans         &kp N0  &kp N1 &kp N2 &kp N3 &trans &trans
-                        &trans &trans &trans       &kp COLON   &kp LBKT    &kp RBKT
+   &trans &trans &trans &trans &trans &trans         &trans    &kp N7   &kp N8 &kp N9 &trans  &trans
+   &trans &trans &trans &trans &trans &trans         &kp SQT   &kp N4   &kp N5 &kp N6 &kp DOT &trans
+   &trans &trans &trans &trans &trans &trans         &kp N0    &kp N1   &kp N2 &kp N3 &trans &trans
+                        &trans &trans &trans         &kp COLON &kp LBKT &kp RBKT
                         >;
                 };
 
                 function_layer {
                         display-name = "Function Layer 4";
                         bindings = <
-   &trans &trans &trans &trans &trans &trans         &log_macro  &kp F7 &kp F8 &kp F9 &kp F10 &trans
-   &trans &trans &trans &trans &trans &trans         &root_macro &kp F4 &kp F5 &kp F6 &kp F11 &trans
-   &trans &trans &trans &trans &trans &trans         &appls_macro  &kp F1 &kp F2 &kp F3 &kp F12 &trans
-                        &trans &trans &trans       &han_macro  &kp LPAR    &kp RPAR
+   &trans &trans &trans &trans &trans &trans         &log_macro   &kp F7 &kp F8 &kp F9 &kp F10 &trans
+   &trans &trans &trans &trans &trans &trans         &root_macro  &kp F4 &kp F5 &kp F6 &kp F11 &trans
+   &trans &trans &trans &trans &trans &trans         &appls_macro &kp F1 &kp F2 &kp F3 &kp F12 &trans
+                        &trans &trans &trans         &han_macro   &kp LPAR    &kp RPAR
                         >;
                 };
         };
