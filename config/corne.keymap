@@ -42,14 +42,14 @@
                 #binding-cells = <0>;
                 bindings = <
                     &macro_tap
-                        &kp m
-                        &kp a
-                        &kp r
+                        &kp M
+                        &kp A
+                        &kp R
                         &kp N0
                         &kp N4
-                        &kp b
-                        &kp i
-                        &kp r
+                        &kp B
+                        &kp I
+                        &kp R
                         &kp RET
                 >;
             };
