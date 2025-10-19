@@ -99,16 +99,16 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        display-name = "Default Layer";
+                        display-name = "Default Layer 0";
                         bindings = <
    &trans AS(Q) AS(W) AS(E) AS(R) AS(T)             AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    &trans
-   &trans AS(A) &mt LSHIFT S AS(D) &lt 3 F AS(G)    &kp H &kp J  &kp K     &kp L   &kp SEMI &trans
+   &trans AS(A) &mt LSHIFT S AS(D) &lt 3 F AS(G)    &kp H &kp J  &kp K     &kp L   &lt 2 SEMI &trans
    &trans AS(Z) AS(X) &kp C AS(V) AS(B)             AS(N) AS(M)  &kp COMMA &kp DOT &kp FSLH &trans
                   &lt 4 BSPC &mt LALT N2 &kp ESC         &kp RET &mt RCTRL N3 &kp SPACE
                         >;
                 };
                 lower_layer {
-                        display-name = "Lower Layer";
+                        display-name = "Lower Layer 1";
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
@@ -118,7 +118,7 @@
                 };
 
                 raise_layer {
-                        display-name = "Raise Layer";
+                        display-name = "Raise Layer 2";
                         bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &pass_macro    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
@@ -128,7 +128,7 @@
                 };
 
                 number_layer {
-                        display-name = "Number Layer";
+                        display-name = "Number Layer 3";
                         bindings = <
    &trans &trans &trans &trans &trans &trans         &log_macro  &kp N7 &kp N8 &kp N9 &trans &trans
    &trans &trans &trans &trans &trans &trans         &kp SQT &kp N4 &kp N5 &kp N6 &kp DOT   &trans
@@ -138,7 +138,7 @@
                 };
 
                 function_layer {
-                        display-name = "Function Layer";
+                        display-name = "Function Layer 4";
                         bindings = <
    &trans &trans &trans &trans &trans &trans         &trans  &kp F7 &kp F8 &kp F9 &kp F10 &trans
    &trans &trans &trans &trans &trans &trans         &kp SQT &kp F4 &kp F5 &kp F6 &kp F11 &trans
