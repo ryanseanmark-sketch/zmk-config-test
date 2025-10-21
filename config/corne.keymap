@@ -132,6 +132,31 @@
                         &kp RET
                 >;
             };
+
+            pass_macro2: macro2_pass {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <
+                    &macro_tap
+                        &kp B
+                        &kp E
+                        &kp L
+                        &kp L
+                        &kp A
+                        &kp UNDER
+                        &kp T
+                        &kp H
+                        &kp E
+                        &kp UNDER
+                        &kp B
+                        &kp U
+                        &kp N
+                        &kp N
+                        &kp Y
+                        &kp RET
+                >;
+            };
+
             log_macro: macro_log {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
@@ -198,7 +223,7 @@
                 raise_layer {
                         display-name = "Raise Layer 2";
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &pass_macro1 &pass_macro    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
+   &kp  TAB  &kp EXCL &kp AT &pass_macro2 &pass_macro1 &pass_macro    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans   &trans       &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
                              &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp RALT
