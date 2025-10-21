@@ -207,15 +207,15 @@
    &trans AS(Q) AS(W) AS(E) AS(R) AS(T)             AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    &trans
    &trans AS(A) &mt LSHIFT S AS(D) &lt 3 F AS(G)    &kp H &kp J  &kp K     &kp L   &lt 2 SEMI &trans
    &trans AS(Z) AS(X) &kp C AS(V) AS(B)             AS(N) AS(M)  &kp COMMA &kp DOT &kp FSLH &trans
-                  &lt 4 BSPC &mt LALT N2 &kp ESC         &kp RET &mt RCTRL N3 &kp SPACE
+                  &lt 4 BSPC &mt LALT N2 &kp ESC         &lt 1 RET &mt RCTRL N3 &kp SPACE
                         >;
                 };
                 lower_layer {
                         display-name = "Lower Layer 1";
                         bindings = <
    &kp TAB   &kp QMARK &kp AMPS &kp EQUAL &kp PRCNT &kp AT               &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &trans    &trans &trans &trans &trans &trans               &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT &trans &trans &trans &trans &trans               &trans   &trans   &trans &trans    &trans &trans
+   &trans    &kp PLUS  &kp STAR &kp DLLR &trans &kp TILDE               &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &kp LSHFT &trans    &trans &trans &trans &trans               &trans   &trans   &trans &trans    &trans &trans
                                     &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
