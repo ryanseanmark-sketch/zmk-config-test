@@ -335,22 +335,10 @@
                         &kp U
                         &kp S
                         &kp SPACE
-                        &kp MINUS
-                        &kp U
-                        &kp N
-                        &kp O
-                        &kp SPACE
                         &kp DOT
                         &kp RET
                 >;
             };
-//        SEND_STRING("git diff .\n");
-//        SEND_STRING("git difftool .\n");
-//        SEND_STRING("git branch\n");
-//        SEND_STRING("git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"\n");
-
-
-
 
         };
 
