@@ -26,10 +26,10 @@
                 lower_layer {
                         display-name = "Lower Layer 1";
                         bindings = <
-   &trans   &kp QMARK &kp AMPS &kp EQUAL &kp PRCNT &kp AT      &trans   &kp UNDER &trans &kp DQT   &kp PIPE &trans
-   &trans    &kp PLUS  &kp STAR &kp DLLR &trans &kp TILDE      &kp LEFT &kp DOWN  &kp UP &kp RIGHT &kp INS &trans
-   &trans &trans    &trans &trans &trans &trans                &kp HASH &kp MINUS &trans &trans    &kp END &trans
-                          &kp LGUI     &trans       &kp SPACE      &kp RET  &trans    &kp RALT
+   &trans &kp QMARK &kp AMPS &kp EQUAL &kp PRCNT &kp AT       &trans   &kp UNDER &trans &kp DQT   &kp PIPE &trans
+   &trans &kp PLUS  &kp STAR &kp DLLR  &trans    &kp TILDE    &kp LEFT &kp DOWN  &kp UP &kp RIGHT &kp INS &trans
+   &trans &kp CAPS  &kp EXCL &kp GRAVE &kp CARET &kp BSLH     &kp HASH &kp MINUS &trans &trans    &kp END &trans
+                             &kp DEL  &trans     &kp SPACE    &diff_down_macro &diff_up_macro    &kp RALT
                         >;
                 };
 
@@ -268,6 +268,28 @@
                         &kp X
                         &kp T
                         &kp SPACE
+                >;
+            };
+
+            diff_down_macro: macro_diff_down_macro {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <
+                    &macro_tap
+                        &kp LBKT
+                        &kp C
+                        &kp RET
+                >;
+            };
+
+            diff_up_macro: macro_diff_up_macro {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <
+                    &macro_tap
+                        &kp RBKT
+                        &kp C
+                        &kp RET
                 >;
             };
 
