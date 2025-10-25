@@ -11,6 +11,83 @@
 #define AS(keycode) &as LS(keycode) keycode
 
 / {
+
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+                        display-name = "Default Layer 0";
+                        bindings = <
+   &trans AS(Q) AS(W) AS(E) AS(R) AS(T)             AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    &trans
+   &trans AS(A) &mt LSHIFT S AS(D) &lt 3 F AS(G)    &kp H &kp J  &kp K     &kp L   &lt 2 SEMI &trans
+   &trans AS(Z) AS(X) &kp C AS(V) AS(B)             AS(N) AS(M)  &kp COMMA &kp DOT &kp FSLH &trans
+                  &lt 4 BSPC &mt LALT N2 &kp ESC         &lt 1 RET &mt RCTRL N3 &kp SPACE
+                        >;
+                };
+                lower_layer {
+                        display-name = "Lower Layer 1";
+                        bindings = <
+   &trans   &kp QMARK &kp AMPS &kp EQUAL &kp PRCNT &kp AT               &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+   &trans    &kp PLUS  &kp STAR &kp DLLR &trans &kp TILDE               &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &trans &trans    &trans &trans &trans &trans               &trans   &trans   &trans &trans    &trans &trans
+                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                        >;
+                };
+
+                raise_layer {
+                        display-name = "Raise Layer 2";
+                        bindings = <
+   &trans &kp EXCL &kp AT &pass_macro2 &pass_macro1 &pass_macro    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
+   &trans &trans   &trans &trans       &trans       &trans         &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
+   &trans &trans   &trans &trans       &trans       &trans         &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
+                             &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp RALT
+                        >;
+                };
+
+                number_layer {
+                        display-name = "Number Layer 3";
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans         &trans    &kp N7   &kp N8 &kp N9 &trans  &trans
+   &trans &trans &trans &trans &trans &trans         &kp SQT   &kp N4   &kp N5 &kp N6 &kp DOT &trans
+   &trans &trans &trans &trans &trans &trans         &kp N0    &kp N1   &kp N2 &kp N3 &trans &trans
+                        &trans &trans &trans         &kp COLON &kp LBKT &kp RBKT
+                        >;
+                };
+
+                function_layer {
+                        display-name = "Function Layer 4";
+                        bindings = <
+   &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3         &log_macro   &kp F7 &kp F8 &kp F9 &kp F10 &trans
+   &trans &trans     &trans       &trans       &trans       &bt BT_SEL 4         &root_macro  &kp F4 &kp F5 &kp F6 &kp F11 &trans
+   &trans &trans     &trans       &trans       &trans       &trans               &appls_macro &kp F1 &kp F2 &kp F3 &kp F12 &trans
+                        &trans &trans &trans                                     &han_macro   &kp LPAR    &kp RPAR
+                        >;
+                };
+        };
+   
+
+    combos {
+        compatible = "zmk,combos";
+
+        bt_clear {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&bt BT_CLR>;
+        };
+
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&kp TAB>;
+        };
+
+        combo_gui {
+            timeout-ms = <50>;
+            key-positions = <18 19>;         // E + R
+            bindings = <&kp LGUI>;
+        };
+    };
+
       behaviors {
             as: auto_shift {
                 compatible = "zmk,behavior-hold-tap";
@@ -197,82 +274,5 @@
 
 
         };
-
-        keymap {
-                compatible = "zmk,keymap";
-
-                default_layer {
-                        display-name = "Default Layer 0";
-                        bindings = <
-   &trans AS(Q) AS(W) AS(E) AS(R) AS(T)             AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    &trans
-   &trans AS(A) &mt LSHIFT S AS(D) &lt 3 F AS(G)    &kp H &kp J  &kp K     &kp L   &lt 2 SEMI &trans
-   &trans AS(Z) AS(X) &kp C AS(V) AS(B)             AS(N) AS(M)  &kp COMMA &kp DOT &kp FSLH &trans
-                  &lt 4 BSPC &mt LALT N2 &kp ESC         &lt 1 RET &mt RCTRL N3 &kp SPACE
-                        >;
-                };
-                lower_layer {
-                        display-name = "Lower Layer 1";
-                        bindings = <
-   &kp TAB   &kp QMARK &kp AMPS &kp EQUAL &kp PRCNT &kp AT               &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &trans    &kp PLUS  &kp STAR &kp DLLR &trans &kp TILDE               &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT &trans    &trans &trans &trans &trans               &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
-                };
-
-                raise_layer {
-                        display-name = "Raise Layer 2";
-                        bindings = <
-   &trans &kp EXCL &kp AT &pass_macro2 &pass_macro1 &pass_macro    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-   &trans &trans   &trans &trans       &trans       &trans         &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
-   &trans &trans   &trans &trans       &trans       &trans         &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
-                             &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp RALT
-                        >;
-                };
-
-                number_layer {
-                        display-name = "Number Layer 3";
-                        bindings = <
-   &trans &trans &trans &trans &trans &trans         &trans    &kp N7   &kp N8 &kp N9 &trans  &trans
-   &trans &trans &trans &trans &trans &trans         &kp SQT   &kp N4   &kp N5 &kp N6 &kp DOT &trans
-   &trans &trans &trans &trans &trans &trans         &kp N0    &kp N1   &kp N2 &kp N3 &trans &trans
-                        &trans &trans &trans         &kp COLON &kp LBKT &kp RBKT
-                        >;
-                };
-
-                function_layer {
-                        display-name = "Function Layer 4";
-                        bindings = <
-   &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3         &log_macro   &kp F7 &kp F8 &kp F9 &kp F10 &trans
-   &trans &trans     &trans       &trans       &trans       &bt BT_SEL 4         &root_macro  &kp F4 &kp F5 &kp F6 &kp F11 &trans
-   &trans &trans     &trans       &trans       &trans       &trans               &appls_macro &kp F1 &kp F2 &kp F3 &kp F12 &trans
-                        &trans &trans &trans                                     &han_macro   &kp LPAR    &kp RPAR
-                        >;
-                };
-        };
-   
-
-    combos {
-        compatible = "zmk,combos";
-
-        bt_clear {
-            timeout-ms = <50>;
-            key-positions = <20 21>;
-            bindings = <&bt BT_CLR>;
-        };
-
-        combo_tab {
-            timeout-ms = <50>;
-            key-positions = <19 20>;
-            bindings = <&kp TAB>;
-        };
-
-        combo_gui {
-            timeout-ms = <50>;
-            key-positions = <18 19>;         // E + R
-            bindings = <&kp LGUI>;
-        };
-    };
-
 
 };
