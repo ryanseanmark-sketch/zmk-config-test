@@ -29,7 +29,7 @@
    &trans   &kp QMARK &kp AMPS &kp EQUAL &kp PRCNT &kp AT      &trans   &kp UNDER &trans &kp DQT   &kp PIPE &trans
    &trans    &kp PLUS  &kp STAR &kp DLLR &trans &kp TILDE      &kp LEFT &kp DOWN  &kp UP &kp RIGHT &kp INS &trans
    &trans &trans    &trans &trans &trans &trans                &kp HASH &kp MINUS &trans &trans    &kp END &trans
-                          LGUI     &trans       &kp SPACE      &kp RET  &trans &kp RALT
+                          &kp LGUI     &trans       &kp SPACE      &kp RET  &trans    &kp RALT
                         >;
                 };
 
