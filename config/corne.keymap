@@ -17,9 +17,9 @@
                 default_layer {
                         display-name = "Default Layer 0";
                         bindings = <
-   &trans AS(Q) AS(W)        AS(E)   AS(R)   AS(T)           AS(Y) AS(U)  AS(I)        AS(O)   AS(P)      &trans
-   &trans AS(A) &mt LSHIFT S AS(D)   &lt 3 F AS(G)          &kp H &kp J  &kp K        &kp L   &lt 2 SEMI &trans
-   &trans AS(Z) AS(X)        &lt 2 C AS(V)   AS(B)          AS(N) AS(M)  &kp COMMA    &kp DOT &kp FSLH   &trans
+   &trans AS(Q) AS(W)        AS(E)    AS(R)    AS(T)          AS(Y) AS(U)  AS(I)        AS(O)   AS(P)      &trans
+   &trans AS(A) &mt LSHIFT S AS(D)    &lt 3 F  AS(G)          &kp H &kp J  &kp K        &kp L   &lt 2 SEMI &trans
+   &trans AS(Z) AS(X)        &lt 2 C  AS(V)    AS(B)          AS(N) AS(M)  &kp COMMA    &kp DOT &kp FSLH   &trans
                   &lt 4 BSPC &mt LALT N2   &lt 1 ESC      &lt 1 RET    &mt RCTRL N3 &kp SPACE
                         >;
                 };
@@ -37,7 +37,7 @@
                         display-name = "Raise Layer 2";
                         bindings = <
    &trans &kp EXCL &kp AT &pass_macro2 &pass_macro1 &pass_macro    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-   &trans &trans   &trans &trans       &trans       &trans         &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
+   &trans &trans   &git_status_macro &git_diff_macro  &git_status_full_macro       &trans         &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
    &trans &trans   &trans &trans       &trans       &trans         &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
                              &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp RALT
                         >;
@@ -170,11 +170,6 @@
                 >;
             };
             
-//        SEND_STRING("HanCommsManagerCli get-status\n");
-//        SEND_STRING("AppelsOranjes\n");
-//        SEND_STRING("root\n");
-//        SEND_STRING("tail -F /var/log/logfile1.txt ");
-//        SEND_STRING("HanCommsManagerCli get-status\n");
             pass_macro: macro_pass {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
@@ -339,6 +334,27 @@
                         &kp RET
                 >;
             };
+
+//        SEND_STRING("git diff .\n");
+            git_diff_macro: macro_git_diff {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <
+                    &macro_tap
+                        &kp G
+                        &kp I
+                        &kp T
+                        &kp SPACE
+                        &kp D
+                        &kp I
+                        &kp F
+                        &kp F
+                        &kp SPACE
+                        &kp DOT
+                        &kp RET
+                >;
+            };
+//        SEND_STRING("git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"\n");
 
         };
 
