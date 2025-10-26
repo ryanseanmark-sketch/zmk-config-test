@@ -17,7 +17,7 @@
                 default_layer {
                         display-name = "Default Layer 0";
                         bindings = <
-   &trans AS(Q) AS(W)        AS(E)   AS(R)   AS(T           AS(Y) AS(U)  AS(I)        AS(O)   AS(P)      &trans
+   &trans AS(Q) AS(W)        AS(E)   AS(R)   AS(T)           AS(Y) AS(U)  AS(I)        AS(O)   AS(P)      &trans
    &trans AS(A) &mt LSHIFT S AS(D)   &lt 3 F AS(G)          &kp H &kp J  &kp K        &kp L   &lt 2 SEMI &trans
    &trans AS(Z) AS(X)        &lt 2 C AS(V)   AS(B)          AS(N) AS(M)  &kp COMMA    &kp DOT &kp FSLH   &trans
                   &lt 4 BSPC &mt LALT N2   &lt 1 ESC      &lt 1 RET    &mt RCTRL N3 &kp SPACE
