@@ -355,6 +355,40 @@
                 >;
             };
 //        SEND_STRING("git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"\n");
+            git_diff_macro: macro_git_diff {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <
+                    &macro_tap
+                        &kp G
+                        &kp I
+                        &kp T
+                        &kp SPACE
+                        &kp L
+                        &kp O
+                        &kp G
+                        &kp SPACE
+                        &kp MINUS
+                        &kp MINUS
+                        &kp P
+                        &kp R
+                        &kp E
+                        &kp T
+                        &kp T
+                        &kp Y
+                        &kp EQUAL
+                        &kp F
+                        &kp O
+                        &kp R
+                        &kp M
+                        &kp A
+                        &kp T
+                        &kp COLON
+                        &kp DQT
+                        &kp DQT
+                        &kp RET
+                >;
+            };
 
         };
 
