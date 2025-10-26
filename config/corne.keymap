@@ -355,7 +355,7 @@
                 >;
             };
 //        SEND_STRING("git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"\n");
-            git_diff_macro: macro_git_diff {
+            git_log_macro: macro_git_log {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <
