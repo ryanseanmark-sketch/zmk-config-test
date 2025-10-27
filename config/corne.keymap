@@ -36,8 +36,8 @@
                 raise_layer {
                         display-name = "Raise Layer 2";
                         bindings = <
-   &trans &git_log_macro &trans &pass_macro2 &pass_macro1   &pass_macro                    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-   &trans &trans         &git_status_macro &git_diff_macro  &git_status_full_macro       &trans         &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
+   &trans &git_log_macro &trans &pass_macro2 &pass_macro1   &pass_macro                                  &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
+   &trans &trans         &git_status_macro &git_diff_macro  &git_status_full_macro  &git_difftool_macro         &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
    &trans &trans         &trans &trans       &trans         &trans         &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
                              &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp RALT
                         >;
@@ -412,6 +412,28 @@
                 >;
             };
 //        SEND_STRING("git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"\n");
+            git_difftool_macro: macro_git_difftool {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <
+                    &macro_tap
+                        &kp G
+                        &kp I
+                        &kp T
+                        &kp SPACE
+                        &kp D
+                        &kp I
+                        &kp F
+                        &kp F
+                        &kp T
+                        &kp O
+                        &kp O
+                        &kp L
+                        &kp SPACE
+                        &kp DOT
+                        &kp RET
+                >;
+            };
 
         };
 
