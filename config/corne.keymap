@@ -36,9 +36,9 @@
                 raise_layer {
                         display-name = "Raise Layer 2";
                         bindings = <
-   &trans &git_log_macro &trans &pass_macro2 &pass_macro1   &pass_macro                                  &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-   &trans &trans         &git_status_macro &git_diff_macro  &git_status_full_macro  &git_difftool_macro         &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
-   &trans &trans         &trans &trans       &trans         &trans         &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
+   &trans &git_log_macro &trans &pass_macro2 &pass_macro1   &pass_macro                                    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
+   &trans &trans         &git_status_macro &git_diff_macro  &git_status_full_macro  &git_difftool_macro    &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
+   &trans &trans         &trans &trans       &trans         &trans                                         &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
                              &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp RALT
                         >;
                 };
@@ -431,6 +431,25 @@
                         &kp L
                         &kp SPACE
                         &kp DOT
+                        &kp RET
+                >;
+            };
+
+            git_branch_macro: macro_git_branch {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <
+                    &macro_tap
+                        &kp G
+                        &kp I
+                        &kp T
+                        &kp SPACE
+                        &kp B
+                        &kp R
+                        &kp A
+                        &kp N
+                        &kp C
+                        &kp H
                         &kp RET
                 >;
             };
