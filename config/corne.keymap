@@ -36,9 +36,9 @@
                 raise_layer {
                         display-name = "Raise Layer 2";
                         bindings = <
-   &trans &kp EXCL &kp AT &pass_macro2 &pass_macro1 &pass_macro    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-   &trans &trans   &git_status_macro &git_diff_macro  &git_status_full_macro       &trans         &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
-   &trans &trans   &trans &trans       &trans       &trans         &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
+   &trans &git_log_macro &trans &pass_macro2 &pass_macro1   &pass_macro                    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
+   &trans &trans         &git_status_macro &git_diff_macro  &git_status_full_macro       &trans         &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
+   &trans &trans         &trans &trans       &trans         &trans         &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
                              &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp RALT
                         >;
                 };
@@ -385,27 +385,27 @@
                         &kp T
                         &kp COLON
                         &kp DQT
-                        &kp PERCNT
+                        &kp PRCNT
                         &kp H
-                        &kp PERCNT
+                        &kp PRCNT
                         &kp X
                         &kp N0
                         &kp N9
-                        &kp PERCNT
+                        &kp PRCNT
                         &kp A
                         &kp N
-                        &kp PERCNT
+                        &kp PRCNT
                         &kp X
                         &kp N0
                         &kp N9
-                        &kp PERCNT
+                        &kp PRCNT
                         &kp A
                         &kp D
-                        &kp PERCNT
+                        &kp PRCNT
                         &kp X
                         &kp N0
                         &kp N9
-                        &kp PERCNT
+                        &kp PRCNT
                         &kp S
                         &kp DQT
                         &kp RET
