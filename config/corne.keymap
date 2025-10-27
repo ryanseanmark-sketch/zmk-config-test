@@ -385,10 +385,33 @@
                         &kp T
                         &kp COLON
                         &kp DQT
+                        &kp PERCNT
+                        &kp H
+                        &kp PERCNT
+                        &kp X
+                        &kp N0
+                        &kp N9
+                        &kp PERCNT
+                        &kp A
+                        &kp N
+                        &kp PERCNT
+                        &kp X
+                        &kp N0
+                        &kp N9
+                        &kp PERCNT
+                        &kp A
+                        &kp D
+                        &kp PERCNT
+                        &kp X
+                        &kp N0
+                        &kp N9
+                        &kp PERCNT
+                        &kp S
                         &kp DQT
                         &kp RET
                 >;
             };
+//        SEND_STRING("git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"\n");
 
         };
 
