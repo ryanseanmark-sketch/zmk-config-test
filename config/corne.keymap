@@ -438,10 +438,7 @@
             git_branch_macro: macro_git_branch {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp RET
-                >;
+                bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp RET >;
             };
 
         };
