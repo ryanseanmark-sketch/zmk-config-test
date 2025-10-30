@@ -29,15 +29,15 @@
    &trans &kp QMARK &kp AMPS &kp EQUAL &kp PRCNT &kp AT       &trans   &kp UNDER &trans &kp DQT   &kp PIPE &trans
    &trans &kp PLUS  &kp STAR &kp DLLR  &trans    &kp TILDE    &kp LEFT &kp DOWN  &kp UP &kp RIGHT &kp INS  &trans
    &trans &kp CAPS  &kp EXCL &kp GRAVE &kp CARET &kp BSLH     &kp HASH &kp MINUS &trans &trans    &kp END  &trans
-                             &kp DEL  &trans     &trans       &diff_down_macro &diff_up_macro     &kp RALT
+                             &kp DEL  &trans     &trans       &diff_down &diff_up     &kp RALT
                         >;
                 };
 
                 raise_layer {
                         display-name = "Raise Layer 2";
                         bindings = <
-   &trans &git_log_macro &trans &pass_macro2 &pass_macro1   &pass_macro                                    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-   &trans &trans         &git_status_macro &git_diff_macro  &git_status_full_macro  &git_difftool_macro    &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
+   &trans &git_log &trans &pass2 &pass1   &pass                                    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
+   &trans &trans         &git_status &git_diff  &git_status_full  &git_difftool    &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
    &trans &trans         &trans &trans       &trans         &trans                                         &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
                              &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp RALT
                         >;
@@ -56,10 +56,10 @@
                 function_layer {
                         display-name = "Function Layer 4";
                         bindings = <
-   &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3         &log_macro   &kp F7 &kp F8 &kp F9 &kp F10 &trans
-   &trans &trans     &trans       &trans       &trans       &bt BT_SEL 4         &root_macro  &kp F4 &kp F5 &kp F6 &kp F11 &trans
-   &trans &trans     &trans       &trans       &trans       &trans               &appls_macro &kp F1 &kp F2 &kp F3 &kp F12 &trans
-                        &trans &trans &trans                                     &han_macro   &kp LPAR    &kp RPAR
+   &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3         &log   &kp F7 &kp F8 &kp F9 &kp F10 &trans
+   &trans &trans     &trans       &trans       &trans       &bt BT_SEL 4         &root  &kp F4 &kp F5 &kp F6 &kp F11 &trans
+   &trans &trans     &trans       &trans       &trans       &trans               &appls &kp F1 &kp F2 &kp F3 &kp F12 &trans
+                        &trans &trans &trans                                     &han   &kp LPAR    &kp RPAR
                         >;
                 };
         };
@@ -97,92 +97,92 @@
                 bindings = <&kp>, <&kp>;
             };
 
-            root_macro: macro_root {
+            root: root {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp R &kp O &kp O &kp T &kp RET >;
             };
 
-            appls_macro: macro_appls {
+            appls: appls {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp LS(A) &kp P &kp P &kp E &kp L &kp S &kp LS(O) &kp R &kp A &kp N &kp J &kp E &kp S &kp RET >;
             };
 
-            han_macro: macro_han {
+            han: han {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp LS(H) &kp A &kp N &kp LS(C) &kp O &kp M &kp M &kp S &kp LS(M) &kp A &kp N &kp A &kp G &kp E &kp R &kp LS(C) &kp L &kp I &kp SPACE &kp G &kp E &kp T &kp MINUS &kp S &kp T &kp A &kp T &kp U &kp S &kp RET >;
             };
             
-            pass_macro: macro_pass {
+            pass: pass {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp M &kp A &kp R &kp N0 &kp N4 &kp B &kp I &kp R &kp RET >;
             };
 
-            pass_macro1: macro1_pass {
+            pass1: pass1 {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp LS(M) &kp A &kp R &kp N0 &kp N4 &kp B &kp I &kp R &kp RET >;
             };
 
-            pass_macro2: macro2_pass {
+            pass2: pass2 {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp B &kp E &kp L &kp L &kp A &kp UNDER &kp T &kp H &kp E &kp UNDER &kp B &kp U &kp N &kp N &kp Y &kp RET >;
             };
 
-            log_macro: macro_log {
+            log: log {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp T &kp A &kp I &kp L &kp SPACE &kp MINUS &kp LS(F) &kp SPACE &kp SLASH &kp V &kp A &kp R &kp SLASH &kp L &kp O &kp G &kp SLASH &kp L &kp O &kp G &kp F &kp I &kp L &kp E &kp N1 &kp DOT &kp T &kp X &kp T &kp SPACE >;
             };
 
-            diff_down_macro: macro_diff_down {
+            diff_down: diff_down {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp LBKT &kp C &kp RET >;
             };
 
-            diff_up_macro: macro_diff_up {
+            diff_up: diff_up {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp RBKT &kp C &kp RET >;
             };
 
-            git_status_macro: macro_git_status {
+            git_status: git_status {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S &kp SPACE &kp MINUS &kp U &kp N &kp O &kp SPACE &kp DOT &kp RET >;
             };
 
-            git_status_full_macro: macro_git_status_full {
+            git_status_full: git_status_full {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S &kp SPACE &kp DOT &kp RET >;
             };
 
 //        SEND_STRING("git diff .\n");
-            git_diff_macro: macro_git_diff {
+            git_diff: git_diff {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp DOT &kp RET >;
             };
 //        SEND_STRING("git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"\n");
-            git_log_macro: macro_git_log {
+            git_log: git_log {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp L &kp O &kp G &kp SPACE &kp MINUS &kp MINUS &kp P &kp R &kp E &kp T &kp T &kp Y &kp EQUAL &kp F &kp O &kp R &kp M &kp A &kp T &kp COLON &kp DQT &kp PRCNT &kp H &kp PRCNT &kp X &kp N0 &kp N9 &kp PRCNT &kp A &kp N &kp PRCNT &kp X &kp N0 &kp N9 &kp PRCNT &kp A &kp D &kp PRCNT &kp X &kp N0 &kp N9 &kp PRCNT &kp S &kp DQT &kp RET >;
             };
 //        SEND_STRING("git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"\n");
-            git_difftool_macro: macro_git_difftool {
+            git_difftool: git_difftool {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp T &kp O &kp O &kp L &kp SPACE &kp DOT &kp RET >;
             };
 
-            git_branch_macro: git_branch_macro {
+            git_branch: git_branch {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp RET >;
