@@ -182,7 +182,7 @@
                 bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp T &kp O &kp O &kp L &kp SPACE &kp DOT &kp RET >;
             };
 
-            git_branch_macro: macro_git_branch {
+            git_branch_macro: git_branch_macro {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp B &kp R &kp A &kp N &kp C &kp H &kp RET >;
