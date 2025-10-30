@@ -100,339 +100,86 @@
             root_macro: macro_root {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp R
-                        &kp O
-                        &kp O
-                        &kp T
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp R &kp O &kp O &kp T &kp RET >;
             };
 
             appls_macro: macro_appls {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp LS(A)
-                        &kp P
-                        &kp P
-                        &kp E
-                        &kp L
-                        &kp S
-                        &kp LS(O)
-                        &kp R
-                        &kp A
-                        &kp N
-                        &kp J
-                        &kp E
-                        &kp S
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp LS(A) &kp P &kp P &kp E &kp L &kp S &kp LS(O) &kp R &kp A &kp N &kp J &kp E &kp S &kp RET >;
             };
 
             han_macro: macro_han {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp LS(H)
-                        &kp A
-                        &kp N
-                        &kp LS(C)
-                        &kp O
-                        &kp M
-                        &kp M
-                        &kp S
-                        &kp LS(M)
-                        &kp A
-                        &kp N
-                        &kp A
-                        &kp G
-                        &kp E
-                        &kp R
-                        &kp LS(C)
-                        &kp L
-                        &kp I
-                        &kp SPACE
-                        &kp G
-                        &kp E
-                        &kp T
-                        &kp MINUS
-                        &kp S
-                        &kp T
-                        &kp A
-                        &kp T
-                        &kp U
-                        &kp S
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp LS(H) &kp A &kp N &kp LS(C) &kp O &kp M &kp M &kp S &kp LS(M) &kp A &kp N &kp A &kp G &kp E &kp R &kp LS(C) &kp L &kp I &kp SPACE &kp G &kp E &kp T &kp MINUS &kp S &kp T &kp A &kp T &kp U &kp S &kp RET >;
             };
             
             pass_macro: macro_pass {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp M
-                        &kp A
-                        &kp R
-                        &kp N0
-                        &kp N4
-                        &kp B
-                        &kp I
-                        &kp R
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp M &kp A &kp R &kp N0 &kp N4 &kp B &kp I &kp R &kp RET >;
             };
 
             pass_macro1: macro1_pass {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp LS(M)
-                        &kp A
-                        &kp R
-                        &kp N0
-                        &kp N4
-                        &kp B
-                        &kp I
-                        &kp R
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp LS(M) &kp A &kp R &kp N0 &kp N4 &kp B &kp I &kp R &kp RET >;
             };
 
             pass_macro2: macro2_pass {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp B
-                        &kp E
-                        &kp L
-                        &kp L
-                        &kp A
-                        &kp UNDER
-                        &kp T
-                        &kp H
-                        &kp E
-                        &kp UNDER
-                        &kp B
-                        &kp U
-                        &kp N
-                        &kp N
-                        &kp Y
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp B &kp E &kp L &kp L &kp A &kp UNDER &kp T &kp H &kp E &kp UNDER &kp B &kp U &kp N &kp N &kp Y &kp RET >;
             };
 
             log_macro: macro_log {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp T
-                        &kp A
-                        &kp I
-                        &kp L
-                        &kp SPACE
-                        &kp MINUS
-                        &kp LS(F)
-                        &kp SPACE
-                        &kp SLASH
-                        &kp V
-                        &kp A
-                        &kp R
-                        &kp SLASH
-                        &kp L
-                        &kp O
-                        &kp G
-                        &kp SLASH
-                        &kp L
-                        &kp O
-                        &kp G
-                        &kp F
-                        &kp I
-                        &kp L
-                        &kp E
-                        &kp N1
-                        &kp DOT
-                        &kp T
-                        &kp X
-                        &kp T
-                        &kp SPACE
-                >;
+                bindings = <&macro_tap &kp T &kp A &kp I &kp L &kp SPACE &kp MINUS &kp LS(F) &kp SPACE &kp SLASH &kp V &kp A &kp R &kp SLASH &kp L &kp O &kp G &kp SLASH &kp L &kp O &kp G &kp F &kp I &kp L &kp E &kp N1 &kp DOT &kp T &kp X &kp T &kp SPACE >;
             };
 
             diff_down_macro: macro_diff_down {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp LBKT
-                        &kp C
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp LBKT &kp C &kp RET >;
             };
 
             diff_up_macro: macro_diff_up {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp RBKT
-                        &kp C
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp RBKT &kp C &kp RET >;
             };
 
             git_status_macro: macro_git_status {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp G
-                        &kp I
-                        &kp T
-                        &kp SPACE
-                        &kp S
-                        &kp T
-                        &kp A
-                        &kp T
-                        &kp U
-                        &kp S
-                        &kp SPACE
-                        &kp MINUS
-                        &kp U
-                        &kp N
-                        &kp O
-                        &kp SPACE
-                        &kp DOT
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S &kp SPACE &kp MINUS &kp U &kp N &kp O &kp SPACE &kp DOT &kp RET >;
             };
 
             git_status_full_macro: macro_git_status_full {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp G
-                        &kp I
-                        &kp T
-                        &kp SPACE
-                        &kp S
-                        &kp T
-                        &kp A
-                        &kp T
-                        &kp U
-                        &kp S
-                        &kp SPACE
-                        &kp DOT
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S &kp SPACE &kp DOT &kp RET >;
             };
 
 //        SEND_STRING("git diff .\n");
             git_diff_macro: macro_git_diff {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp G
-                        &kp I
-                        &kp T
-                        &kp SPACE
-                        &kp D
-                        &kp I
-                        &kp F
-                        &kp F
-                        &kp SPACE
-                        &kp DOT
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp SPACE &kp DOT &kp RET >;
             };
 //        SEND_STRING("git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"\n");
             git_log_macro: macro_git_log {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp G
-                        &kp I
-                        &kp T
-                        &kp SPACE
-                        &kp L
-                        &kp O
-                        &kp G
-                        &kp SPACE
-                        &kp MINUS
-                        &kp MINUS
-                        &kp P
-                        &kp R
-                        &kp E
-                        &kp T
-                        &kp T
-                        &kp Y
-                        &kp EQUAL
-                        &kp F
-                        &kp O
-                        &kp R
-                        &kp M
-                        &kp A
-                        &kp T
-                        &kp COLON
-                        &kp DQT
-                        &kp PRCNT
-                        &kp H
-                        &kp PRCNT
-                        &kp X
-                        &kp N0
-                        &kp N9
-                        &kp PRCNT
-                        &kp A
-                        &kp N
-                        &kp PRCNT
-                        &kp X
-                        &kp N0
-                        &kp N9
-                        &kp PRCNT
-                        &kp A
-                        &kp D
-                        &kp PRCNT
-                        &kp X
-                        &kp N0
-                        &kp N9
-                        &kp PRCNT
-                        &kp S
-                        &kp DQT
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp L &kp O &kp G &kp SPACE &kp MINUS &kp MINUS &kp P &kp R &kp E &kp T &kp T &kp Y &kp EQUAL &kp F &kp O &kp R &kp M &kp A &kp T &kp COLON &kp DQT &kp PRCNT &kp H &kp PRCNT &kp X &kp N0 &kp N9 &kp PRCNT &kp A &kp N &kp PRCNT &kp X &kp N0 &kp N9 &kp PRCNT &kp A &kp D &kp PRCNT &kp X &kp N0 &kp N9 &kp PRCNT &kp S &kp DQT &kp RET >;
             };
 //        SEND_STRING("git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"\n");
             git_difftool_macro: macro_git_difftool {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <
-                    &macro_tap
-                        &kp G
-                        &kp I
-                        &kp T
-                        &kp SPACE
-                        &kp D
-                        &kp I
-                        &kp F
-                        &kp F
-                        &kp T
-                        &kp O
-                        &kp O
-                        &kp L
-                        &kp SPACE
-                        &kp DOT
-                        &kp RET
-                >;
+                bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp D &kp I &kp F &kp F &kp T &kp O &kp O &kp L &kp SPACE &kp DOT &kp RET >;
             };
 
             git_branch_macro: macro_git_branch {
