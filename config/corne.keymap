@@ -18,17 +18,17 @@
                 default_layer {
                         display-name = "Default Layer 0";
                         bindings = <
-   &trans AS(Q) AS(W)        AS(E)    AS(R)    AS(T)          AS(Y) AS(U)  AS(I)        AS(O)   AS(P)      &trans
-   &trans AS(A) &mt LSHIFT S AS(D)    &lt 3 F  AS(G)          &kp H &kp J  &kp K        &kp L   &lt 2 SEMI &trans
-   &trans AS(Z) AS(X)        &lt 2 C  AS(V)    AS(B)          AS(N) AS(M)  &kp COMMA    &kp DOT &kp FSLH   &trans
+   &trans AS(Q) AS(W)        AS(E)    AS(R)    AS(T)          AS(Y) AS(U)  AS(I)             AS(O)   AS(P)      &trans
+   &trans AS(A) &mt LSHIFT S AS(D)    &lt 3 F  AS(G)          &kp H &kp J  &kp K             &kp L   &lt 2 SEMI &trans
+   &trans AS(Z) AS(X)        &lt 2 C  AS(V)    AS(B)          AS(N) AS(M)  &mt LSHIFT COMMA  &kp DOT &kp FSLH   &trans
                   &lt 4 BSPC &mt LALT N2   &lt 1 ESC      &lt 1 RET    &mt RCTRL N3 &kp SPACE
                         >;
                 };
                 lower_layer {
                         display-name = "Lower Layer 1";
                         bindings = <
-   &trans &kp QMARK &kp AMPS &kp EQUAL &kp PRCNT &kp AT       &trans   &kp UNDER &trans &kp DQT   &kp PIPE &trans
-   &trans &kp PLUS  &kp STAR &kp DLLR  &trans    &kp TILDE    &mmv MOVE_LEFT &kp DOWN  &kp UP &kp RIGHT &kp INS  &trans
+   &trans &kp QMARK &kp AMPS &kp EQUAL &kp PRCNT &kp AT       &trans         &kp UNDER      &trans       &kp DQT         &kp PIPE &trans
+   &trans &kp PLUS  &kp STAR &kp DLLR  &trans    &kp TILDE    &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &kp INS  &trans
    &trans &kp CAPS  &kp EXCL &kp GRAVE &kp CARET &kp BSLH     &kp HASH &kp MINUS &trans &trans    &kp END  &trans
                              &kp DEL  &trans     &trans       &diff_down &diff_up     &kp RALT
                         >;
