@@ -15,14 +15,14 @@
 
 
     macros {
-        git_log: git_log {
+        xgit_log: xgit_log {
             label = "GIT_LOG";
             bindings = <&text "git log --pretty=format:@%h%x09%an%x09%ad%x09%s@">;
         };
     };
 
-    &macro_git_log {
-        bindings = <&git_log>;
+    &macro_xgit_log {
+        bindings = <&xgit_log>;
     };
 
         keymap {
