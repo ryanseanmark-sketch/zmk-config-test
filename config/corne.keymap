@@ -146,13 +146,13 @@
             diff_down: diff_down {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp RBKT &kp C &kp RET>;
+                bindings = <&macro_tap &kp RBKT &kp C>;
             };
 
             diff_up: diff_up {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp LBKT &kp C &kp RET>;
+                bindings = <&macro_tap &kp LBKT &kp C>;
             };
 
             git_status: git_status {
