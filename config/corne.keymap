@@ -146,13 +146,13 @@
             diff_down: diff_down {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp LBKT &kp C &kp RET>;
+                bindings = <&macro_tap &kp RBKT &kp C &kp RET>;
             };
 
             diff_up: diff_up {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp RBKT &kp C &kp RET>;
+                bindings = <&macro_tap &kp LBKT &kp C &kp RET>;
             };
 
             git_status: git_status {
@@ -175,10 +175,15 @@
             };
 //        SEND_STRING("git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"\n");
 //                git log --pretty=format:@%h_%an_%ad_%s@
+//            git_log: git_log {
+//                compatible = "zmk,behavior-macro";
+//                #binding-cells = <0>;
+//                bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp L &kp O &kp G &kp SPACE &kp MINUS &kp MINUS &kp P &kp R &kp E &kp T &kp T &kp Y &kp EQUAL &kp F &kp O &kp R &kp M &kp A &kp T &kp COLON &kp DQT &kp PRCNT &kp H &kp UNDER &kp PRCNT &kp A &kp N &kp UNDER &kp PRCNT &kp A &kp D &kp UNDER &kp PRCNT &kp S &kp DQT &kp RET>;
+//            };
             git_log: git_log {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp G &kp I &kp T &kp SPACE &kp L &kp O &kp G &kp SPACE &kp MINUS &kp MINUS &kp P &kp R &kp E &kp T &kp T &kp Y &kp EQUAL &kp F &kp O &kp R &kp M &kp A &kp T &kp COLON &kp DQT &kp PRCNT &kp H &kp UNDER &kp PRCNT &kp A &kp N &kp UNDER &kp PRCNT &kp A &kp D &kp UNDER &kp PRCNT &kp S &kp DQT &kp RET>;
+                bindings = <&macro_tap &kp Q &kp RET>;
             };
 //        SEND_STRING("git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"\n");
             git_difftool: git_difftool {
