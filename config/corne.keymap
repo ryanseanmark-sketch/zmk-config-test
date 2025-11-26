@@ -40,10 +40,10 @@
                 raise_layer {
                         display-name = "Raise Layer 2";
                         bindings = <
-   &trans &git_log &trans      &pass2    &pass1           &pass           &mkp MB2       &mkp MB3       &trans       &trans          &trans   &trans  
-   &trans &trans   &git_status &git_diff &git_status_full &git_difftool   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &kp INS  &trans  
-   &trans &trans   &trans      &trans    &trans           &trans          &mkp MB1       &msc SCRL_DOWN &msc SCRL_UP &trans          &kp END  &trans  
-                               &trans    &trans           &trans          &trans         &trans         &trans                                            
+   &trans &git_log &trans      &pass2    &pass1           &pass             &mkp MB2       &mkp MB3       &trans       &trans          &trans   &trans  
+   &trans &trans   &git_status &git_diff &git_status_full &git_difftool     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &kp INS  &trans  
+   &trans &trans   &trans      &trans    &trans           &trans            &mkp MB1       &msc SCRL_DOWN &msc SCRL_UP &trans          &kp END  &trans  
+                               &kp BSPC  &kp DEL          &trans            &trans         &trans         &trans                                            
                         >;
                 };
 
