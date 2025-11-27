@@ -33,7 +33,7 @@
    &trans &kp QMARK &kp AMPS &kp EQUAL &kp PRCNT &kp DQT      &trans    &kp UNDER &trans    &kp AT    &kp PIPE2 &trans 
    &trans &kp PLUS  &kp STAR &kp DLLR  &trans    &kp TILDE2   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp INS   &trans 
    &trans &kp CAPS  &kp EXCL &kp GRAVE &kp CARET &kp NUBS     &kp NUHS  &kp MINUS &trans    &trans    &kp END   &trans 
-                             &kp DEL  &trans     &trans       &trans    &diff_down &diff_up                           
+                             &kp BSPC  &kp DEL     &trans       &trans    &diff_down &diff_up                           
                         >;
                 };
 
